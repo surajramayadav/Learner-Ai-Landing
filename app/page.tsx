@@ -117,8 +117,10 @@ function Hero() {
                 Download on App Store
               </a>
               <a
-                href="#"
+                href="https://play.google.com/store/apps/details?id=com.learn.language.speak.fluently"
                 id="google-play-btn"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-secondary text-base"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -128,27 +130,21 @@ function Hero() {
               </a>
             </div>
 
-            {/* Social proof */}
-            <div className="mt-8 flex items-center gap-6 justify-center lg:justify-start">
+            {/* Supported languages */}
+            <div className="mt-8 flex items-center gap-4 justify-center lg:justify-start">
               <div className="flex -space-x-2">
-                {["🇫🇷", "🇯🇵", "🇪🇸", "🇩🇪"].map((flag, i) => (
+                {["🇫🇷", "🇯🇵", "🇪🇸", "🇩🇪", "🇨🇳", "🇰🇷"].map((flag, i) => (
                   <div
                     key={i}
-                    className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-100 to-violet-100 border-2 border-white flex items-center justify-center text-sm"
+                    className="w-9 h-9 rounded-full bg-gradient-to-br from-purple-100 to-violet-100 border-2 border-white flex items-center justify-center text-sm shadow-sm"
                   >
                     {flag}
                   </div>
                 ))}
               </div>
-              <div>
-                <div className="flex items-center gap-1">
-                  {[1,2,3,4,5].map(i => (
-                    <span key={i} className="text-amber-400 text-sm">★</span>
-                  ))}
-                  <span className="text-sm font-bold text-gray-700 ml-1">4.9</span>
-                </div>
-                <p className="text-xs text-gray-400">50,000+ learners worldwide</p>
-              </div>
+              <p className="text-sm font-medium text-gray-500">
+                Supporting <span className="text-purple-600 font-bold">50+ languages</span> and dialects
+              </p>
             </div>
           </div>
 
@@ -249,7 +245,7 @@ const steps = [
     number: "1",
     icon: "🌍",
     title: "Pick Your Language",
-    desc: "Choose from 30+ languages — from Spanish to Japanese, French to Korean. Set your goal and level.",
+    desc: "Choose from 50+ languages — from Spanish to Japanese, French to Korean. Set your goal and level.",
   },
   {
     number: "2",
@@ -315,7 +311,7 @@ function MockupSection() {
             </p>
             <ul className="space-y-3 text-left inline-block">
               {[
-                "Real-time AI conversation in 30+ languages",
+                "Real-time AI conversation in 50+ languages",
                 "Instant pronunciation scoring & feedback",
                 "Daily vocabulary and grammar exercises",
                 "Streak tracking to keep you motivated",
@@ -352,9 +348,9 @@ function MockupSection() {
 
 /* ─────────────────────────── STATS ─────────────────────────── */
 const stats = [
-  { value: "30+", label: "Languages" },
+  { value: "50+", label: "Languages" },
   { value: "50K+", label: "Active Learners" },
-  { value: "4.9★", label: "App Rating" },
+  { value: "24/7", label: "AI Tutor Support" },
   { value: "10M+", label: "Conversations" },
 ];
 
@@ -375,56 +371,6 @@ function Stats() {
   );
 }
 
-/* ─────────────────────────── TESTIMONIALS ─────────────────────────── */
-const testimonials = [
-  {
-    quote: "I went from knowing zero French to holding full conversations in 3 months. Learner AI is genuinely magic.",
-    name: "Priya S.",
-    lang: "🇫🇷 Learning French",
-  },
-  {
-    quote: "The AI catches my pronunciation mistakes instantly. No other app has given me this level of feedback.",
-    name: "Carlos M.",
-    lang: "🇯🇵 Learning Japanese",
-  },
-  {
-    quote: "I travel a lot for work and this app lets me pick up basics of any language super fast. Love it!",
-    name: "Emma T.",
-    lang: "🇪🇸 Learning Spanish",
-  },
-];
-
-function Testimonials() {
-  return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="text-center mb-14">
-          <p className="section-label">What learners say</p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-            Real stories, <span className="text-gradient-purple">real results</span>
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <div key={i} className="card-elevated p-7">
-              <div className="text-3xl text-purple-300 mb-4">&ldquo;</div>
-              <p className="text-gray-600 leading-relaxed mb-5 text-sm">{t.quote}</p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-violet-500 flex items-center justify-center text-white font-bold text-sm">
-                  {t.name[0]}
-                </div>
-                <div>
-                  <p className="font-bold text-gray-900 text-sm">{t.name}</p>
-                  <p className="text-gray-400 text-xs">{t.lang}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* ─────────────────────────── CTA BANNER ─────────────────────────── */
 function CTABanner() {
@@ -446,7 +392,7 @@ function CTABanner() {
             </svg>
             Download on App Store
           </a>
-          <a href="#" id="cta-google-play" className="btn-secondary text-base">
+          <a href="https://play.google.com/store/apps/details?id=com.learn.language.speak.fluently" id="cta-google-play" target="_blank" rel="noopener noreferrer" className="btn-secondary text-base">
             <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3.18 23.76c.37.2.8.22 1.2.06l12.55-7.26-2.88-2.88-10.87 10.08zm-1.05-20.2A1.5 1.5 0 0 0 2 4.5v15c0 .46.2.88.52 1.18l.08.07L14.27 9l-.03-.03L2.13 3.56zm20.04 8.02-2.99-1.73-3.17 3.17 3.17 3.17 3.01-1.74a1.5 1.5 0 0 0 0-2.87zM4.38.18 16.93 7.44l-2.88 2.88L1.58.24C1.97.08 2.41.1 2.78.3l1.6-.12z"/>
             </svg>
@@ -527,7 +473,6 @@ export default function HomePage() {
         <HowItWorks />
         <MockupSection />
         <Stats />
-        <Testimonials />
         <CTABanner />
       </main>
       <Footer />

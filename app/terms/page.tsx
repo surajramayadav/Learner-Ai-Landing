@@ -69,7 +69,7 @@ export default function TermsPage() {
               Terms &amp; <span className="text-gradient-purple">Conditions</span>
             </h1>
             <p className="text-gray-500 text-base">
-              Last updated: <strong>June 26, 2025</strong>
+              Last updated: <strong>June 26, 2026</strong>
             </p>
           </div>
         </section>
@@ -80,11 +80,11 @@ export default function TermsPage() {
             {/* TOC */}
             <div className="bg-purple-50 border border-purple-100 rounded-2xl p-6 mb-12">
               <p className="font-bold text-purple-800 mb-3 text-sm uppercase tracking-widest">Contents</p>
-              <ul className="space-y-1.5 text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5 text-sm">
                 {[
                   ["#acceptance", "1. Acceptance of Terms"],
                   ["#eligibility", "2. User Eligibility"],
-                  ["#account", "3. Account Registration"],
+                  ["#account", "3. Data Storage & Accounts"],
                   ["#acceptable-use", "4. Acceptable Use Policy"],
                   ["#intellectual-property", "5. Intellectual Property"],
                   ["#subscriptions", "6. Subscriptions & Payments"],
@@ -96,13 +96,13 @@ export default function TermsPage() {
                   ["#changes", "12. Changes to These Terms"],
                   ["#contact", "13. Contact Us"],
                 ].map(([href, label]) => (
-                  <li key={href}>
+                  <div key={href}>
                     <a href={href} className="text-purple-600 hover:text-purple-800 transition-colors">
                       {label}
                     </a>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             <div className="prose-policy">
@@ -128,22 +128,17 @@ export default function TermsPage() {
                 <li>You have the legal capacity to enter into a binding agreement.</li>
                 <li>You are not prohibited from receiving services under applicable laws.</li>
               </ul>
-              <p>
-                We reserve the right to terminate accounts of users who we discover are underage without prior notice.
-              </p>
 
               {/* Section 3 */}
-              <h2 id="account">3. Account Registration</h2>
-              <p>To access certain features, you must create an account. You agree to:</p>
-              <ul>
-                <li>Provide accurate, current, and complete registration information.</li>
-                <li>Keep your password confidential and not share it with others.</li>
-                <li>Notify us immediately at <a href="mailto:support@learnerai.app">support@learnerai.app</a> if you suspect unauthorized access to your account.</li>
-                <li>Accept responsibility for all activities that occur under your account.</li>
-              </ul>
+              <h2 id="account">3. Data Storage &amp; Accounts</h2>
               <p>
-                We reserve the right to suspend or terminate accounts that contain false information or violate these Terms.
+                To provide maximum privacy and complete control over your data, <strong>no account registration is required to use Learner AI, and we do not store your personal information on our servers</strong>.
               </p>
+              <ul>
+                <li><strong>Local Storage:</strong> All settings, target languages, vocabulary progress, streaks, and AI chat logs are saved locally on your device&apos;s phone localstorage.</li>
+                <li><strong>Data Loss:</strong> Because your data is stored locally, clearing application data, clearing browser cache/localstorage, or uninstalling the app will permanently delete your records and settings. We cannot recover this data for you.</li>
+                <li><strong>Security:</strong> You are solely responsible for maintaining the physical and digital security of your device to protect your local data.</li>
+              </ul>
 
               {/* Section 4 */}
               <h2 id="acceptable-use">4. Acceptable Use Policy</h2>
@@ -159,9 +154,6 @@ export default function TermsPage() {
                 <li>Circumvent any subscription or payment mechanisms.</li>
                 <li>Use the Service for commercial purposes without our prior written consent.</li>
               </ul>
-              <p>
-                Violation of this policy may result in immediate account suspension or termination.
-              </p>
 
               {/* Section 5 */}
               <h2 id="intellectual-property">5. Intellectual Property</h2>
@@ -175,13 +167,12 @@ export default function TermsPage() {
               {/* Section 6 */}
               <h2 id="subscriptions">6. Subscriptions &amp; Payments</h2>
               <p>
-                Learner AI offers a free tier and optional premium subscription plans. By subscribing to a paid plan:
+                Learner AI offers a free tier and optional premium features. By initiating any paid subscription or feature unlocks:
               </p>
               <ul>
-                <li>You authorize us to charge your payment method on a recurring basis (monthly or annually, as selected).</li>
-                <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period.</li>
-                <li>You can cancel your subscription at any time via your App Store or Google Play account settings. Cancellation takes effect at the end of the current billing period.</li>
-                <li>We do not offer refunds for partial subscription periods, except where required by applicable law.</li>
+                <li>You authorize charges through your mobile app store account (App Store or Google Play) on a recurring basis as selected.</li>
+                <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current billing period via App Store or Google Play settings.</li>
+                <li>We do not offer refunds or data transfers between devices, as purchases are tied to your respective App Store or Google Play account.</li>
                 <li>Prices are subject to change with 30 days&apos; notice.</li>
               </ul>
 
@@ -195,7 +186,7 @@ export default function TermsPage() {
               </p>
               <ul>
                 <li>The Service will be error-free, uninterrupted, or free of viruses.</li>
-                <li>The AI-generated language content is 100% accurate or appropriate for all contexts.</li>
+                <li>The AI-generated content (including Gemini API responses) is 100% accurate, reliable, or appropriate for all contexts.</li>
                 <li>Your learning outcomes will meet specific expectations or goals.</li>
                 <li>The Service will be compatible with all devices or operating systems.</li>
               </ul>
@@ -230,16 +221,13 @@ export default function TermsPage() {
               {/* Section 11 */}
               <h2 id="termination">11. Termination</h2>
               <p>
-                We reserve the right to suspend or terminate your access to the Service at any time, with or without notice, for any reason, including violation of these Terms. Upon termination, your right to use the Service immediately ceases.
-              </p>
-              <p>
-                You may terminate your account at any time by deleting it within the app settings or by contacting us at <a href="mailto:support@learnerai.app">support@learnerai.app</a>.
+                We reserve the right to suspend or terminate your access to the Service at any time, with or without notice, for any reason, including violation of these Terms. Upon termination, your right to use the Service immediately ceases. You can stop using the Service at any time by uninstalling the application.
               </p>
 
               {/* Section 12 */}
               <h2 id="changes">12. Changes to These Terms</h2>
               <p>
-                We may revise these Terms at any time. We will notify you of material changes through the app or by email. The &ldquo;Last updated&rdquo; date at the top of this page reflects when the most recent changes were made.
+                We may revise these Terms at any time. We will notify you of material changes through the app or website. The &ldquo;Last updated&rdquo; date reflects when the most recent changes were made.
               </p>
               <p>
                 Your continued use of the Service after changes take effect constitutes your acceptance of the revised Terms.
@@ -249,9 +237,7 @@ export default function TermsPage() {
               <h2 id="contact">13. Contact Us</h2>
               <p>If you have any questions about these Terms, please contact us:</p>
               <ul>
-                <li><strong>Email:</strong> <a href="mailto:legal@learnerai.app">legal@learnerai.app</a></li>
-                <li><strong>Support:</strong> <a href="mailto:support@learnerai.app">support@learnerai.app</a></li>
-                <li><strong>Website:</strong> <a href="https://learnerai.app">learnerai.app</a></li>
+                <li><strong>Email:</strong> <a href="mailto:ganeshglive@gmail.com">ganeshglive@gmail.com</a></li>
               </ul>
             </div>
           </div>

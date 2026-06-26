@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy — Learner AI",
   description:
-    "Read the Learner AI Privacy Policy to understand how we collect, use, and protect your personal data.",
+    "Read the Learner AI Privacy Policy to understand how we collect, use, and safeguard your data.",
 };
 
 function Navbar() {
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
               Privacy <span className="text-gradient-purple">Policy</span>
             </h1>
             <p className="text-gray-500 text-base">
-              Last updated: <strong>June 26, 2025</strong>
+              Last updated: <strong>June 26, 2026</strong>
             </p>
           </div>
         </section>
@@ -80,139 +80,122 @@ export default function PrivacyPage() {
             {/* TOC */}
             <div className="bg-purple-50 border border-purple-100 rounded-2xl p-6 mb-12">
               <p className="font-bold text-purple-800 mb-3 text-sm uppercase tracking-widest">Contents</p>
-              <ul className="space-y-1.5 text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-1.5 text-sm">
                 {[
-                  ["#information-we-collect", "1. Information We Collect"],
-                  ["#how-we-use", "2. How We Use Your Information"],
-                  ["#sharing", "3. Sharing of Information"],
-                  ["#data-retention", "4. Data Retention"],
-                  ["#your-rights", "5. Your Rights"],
-                  ["#security", "6. Security"],
-                  ["#children", "7. Children's Privacy"],
-                  ["#changes", "8. Changes to This Policy"],
-                  ["#contact", "9. Contact Us"],
+                  ["#introduction", "1. Introduction"],
+                  ["#data-we-collect", "2. Data We Collect"],
+                  ["#legal-basis", "3. Legal Basis for Data Processing"],
+                  ["#data-security", "4. Data Security"],
+                  ["#third-party-services", "5. Third-Party Services"],
+                  ["#your-rights", "6. Your Rights Under Data Protection Laws"],
+                  ["#childrens-privacy", "7. Children's Privacy"],
+                  ["#data-retention", "8. Data Retention & Storage"],
+                  ["#cross-border-transfers", "9. Cross-Border Data Transfers"],
+                  ["#cookies", "10. Cookies & Tracking Technologies"],
+                  ["#changes", "11. Changes to This Policy"],
+                  ["#contact", "12. Contact Us"],
                 ].map(([href, label]) => (
-                  <li key={href}>
+                  <div key={href}>
                     <a href={href} className="text-purple-600 hover:text-purple-800 transition-colors">
                       {label}
                     </a>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             <div className="prose-policy">
-              <p>
-                Welcome to <strong>Learner AI</strong> (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;). We are committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and website (collectively, the &ldquo;Service&rdquo;).
-              </p>
-              <p>
-                Please read this policy carefully. If you disagree with its terms, please discontinue use of our Service.
-              </p>
-
               {/* Section 1 */}
-              <h2 id="information-we-collect">1. Information We Collect</h2>
-              <h3>1.1 Information You Provide Directly</h3>
-              <ul>
-                <li><strong>Account Information:</strong> Name, email address, and password when you register.</li>
-                <li><strong>Profile Data:</strong> Native language, target languages, learning goals, and proficiency level.</li>
-                <li><strong>Voice Data:</strong> Audio recordings you submit for pronunciation practice (processed locally or on-device where possible).</li>
-                <li><strong>Communications:</strong> Messages sent to our support team.</li>
-              </ul>
-
-              <h3>1.2 Information Collected Automatically</h3>
-              <ul>
-                <li><strong>Usage Data:</strong> Lessons completed, streak counts, session duration, vocabulary progress.</li>
-                <li><strong>Device Information:</strong> Device type, operating system version, app version, unique device identifiers.</li>
-                <li><strong>Log Data:</strong> IP address, access times, pages viewed, and referring URLs.</li>
-                <li><strong>Crash Reports:</strong> Anonymized crash logs to help us improve app stability.</li>
-              </ul>
-
-              <h3>1.3 Information from Third Parties</h3>
+              <h2 id="introduction">1. Introduction</h2>
               <p>
-                If you sign in via a third-party provider (e.g., Apple Sign-In, Google), we receive basic profile information such as your name and email address, subject to that provider&apos;s privacy policy.
+                This Privacy Policy outlines how Learner AI (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) collects, uses, and safeguards your data when you use our language learning application and AI chat services. We are dedicated to upholding your privacy rights and adhering to global data protection standards, including the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and equivalent laws in other jurisdictions.
               </p>
 
               {/* Section 2 */}
-              <h2 id="how-we-use">2. How We Use Your Information</h2>
-              <p>We use the information we collect to:</p>
-              <ul>
-                <li>Create and manage your account and learning profile.</li>
-                <li>Personalize your language learning curriculum and AI tutor interactions.</li>
-                <li>Analyze pronunciation and provide real-time feedback.</li>
-                <li>Track your progress and generate insights on your dashboards.</li>
-                <li>Send transactional notifications (e.g., streak reminders, lesson completions).</li>
-                <li>Improve our AI models, app features, and overall user experience.</li>
-                <li>Ensure the security and integrity of the Service.</li>
-                <li>Comply with legal obligations.</li>
-              </ul>
+              <h2 id="data-we-collect">2. Data We Collect</h2>
               <p>
-                We do <strong>not</strong> sell your personal data to third parties for their marketing purposes.
+                We prioritize minimizing data collection and only gather information necessary to operate and improve our language learning service. <strong>To maximize your privacy, all user settings, lesson progress, vocabulary banks, and AI chat logs are stored directly on your phone&apos;s local storage.</strong>
               </p>
+              <ul>
+                <li><strong>Account &amp; Profile Information:</strong> We do not require or collect personal information such as full names, phone numbers, or payment details. If you register an account, we may store your email and learning preferences.</li>
+                <li><strong>Voice Data:</strong> Audio recordings you submit for pronunciation practice are processed in real-time. We do not store or analyze your voice data on our servers; it is processed locally on-device where possible.</li>
+                <li><strong>Log &amp; Technical Info:</strong> We may collect device type, operating system (e.g., iOS, Android), app version, and technical specifications (excluding unique device identifiers).</li>
+                <li><strong>Aggregated Performance Data:</strong> Anonymized crash logs and app metrics to help us maintain app stability. This data cannot be linked back to your identity.</li>
+              </ul>
 
               {/* Section 3 */}
-              <h2 id="sharing">3. Sharing of Information</h2>
-              <p>We may share your information with:</p>
+              <h2 id="legal-basis">3. Legal Basis for Data Processing</h2>
+              <p>We process data only where legally permissible and necessary for service delivery:</p>
               <ul>
-                <li><strong>Service Providers:</strong> Third-party vendors who assist us in operating the Service (e.g., cloud hosting, analytics, payment processing). These providers are contractually obligated to protect your data.</li>
-                <li><strong>Legal Requirements:</strong> When required by law, court order, or governmental authority.</li>
-                <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets, your data may be transferred. We will notify you before your data becomes subject to a different privacy policy.</li>
-                <li><strong>With Your Consent:</strong> For any other purpose with your explicit consent.</li>
+                <li><strong>Legitimate Interests:</strong> Optimizing service performance, enhancing security, and detecting abuse.</li>
+                <li><strong>Contractual Necessity:</strong> Fulfilling our obligations to provide the AI tutor and language lessons you requested.</li>
+                <li><strong>Legal Compliance:</strong> Responding to valid legal requests (e.g., court orders) in accordance with applicable laws, after verifying their lawfulness.</li>
               </ul>
 
               {/* Section 4 */}
-              <h2 id="data-retention">4. Data Retention</h2>
+              <h2 id="data-security">4. Data Security</h2>
               <p>
-                We retain your personal data for as long as your account is active or as necessary to provide the Service. If you delete your account, we will delete or anonymize your data within <strong>30 days</strong>, except where we are required by law to retain it longer.
+                Since all user settings, lesson progress, and chat history are stored locally on your device&apos;s phone localstorage and not on our servers, we do not require or maintain server-side databases. Your data is protected directly by your device&apos;s native operating system security and permissions.
               </p>
-              <p>
-                Voice recordings used for pronunciation feedback are processed in real-time and are not stored on our servers beyond the immediate analysis, unless you explicitly opt in to contribute to model improvement.
-              </p>
+              <ul>
+                <li><strong>Local Device Security:</strong> We encourage you to secure your phone using passcode, biometric authentication, or encryption built into your mobile OS.</li>
+                <li><strong>Data in Transit:</strong> Any communication between your app and third-party APIs (such as the Gemini API) is transmitted securely using standard HTTPS encryption.</li>
+              </ul>
 
               {/* Section 5 */}
-              <h2 id="your-rights">5. Your Rights</h2>
-              <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
-              <ul>
-                <li><strong>Access:</strong> Request a copy of the personal data we hold about you.</li>
-                <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data.</li>
-                <li><strong>Deletion:</strong> Request deletion of your personal data ("right to be forgotten").</li>
-                <li><strong>Portability:</strong> Request a machine-readable export of your data.</li>
-                <li><strong>Objection:</strong> Object to certain processing activities, such as direct marketing.</li>
-                <li><strong>Withdraw Consent:</strong> Withdraw previously given consent at any time.</li>
-              </ul>
+              <h2 id="third-party-services">5. Third-Party Services</h2>
               <p>
-                To exercise any of these rights, please contact us at{" "}
-                <a href="mailto:privacy@learnerai.app">privacy@learnerai.app</a>.
-                We will respond within 30 days.
+                To provide specific in-app features, we integrate with trusted third-party providers. Specifically, <strong>we use the Google Gemini API as an AI agent</strong> to power the conversational practice and tutor logic.
               </p>
+              <ul>
+                <li><strong>Gemini API:</strong> Your chat messages and prompts are sent to Google Gemini for real-time response generation. This data is handled in accordance with Google&apos;s developer terms and is not permanently saved or stored by us.</li>
+                <li><strong>Service Providers:</strong> Any secondary support systems (such as anonymized error tracking or app analytics) do not access or store personal details.</li>
+              </ul>
 
               {/* Section 6 */}
-              <h2 id="security">6. Security</h2>
+              <h2 id="your-rights">6. Your Rights Under Data Protection Laws</h2>
               <p>
-                We implement industry-standard security measures including TLS encryption for data in transit and AES-256 encryption for data at rest. However, no method of transmission over the internet is 100% secure. We encourage you to use a strong, unique password for your account.
-              </p>
-              <p>
-                In the event of a data breach that affects your personal information, we will notify you as required by applicable law.
+                Under regulations like the GDPR and CCPA, you have the right to access, correct, delete, or port your data, and to withdraw consent at any time. To exercise these rights, contact us at <a href="mailto:ganeshglive@gmail.com">ganeshglive@gmail.com</a> within 30 days.
               </p>
 
               {/* Section 7 */}
-              <h2 id="children">7. Children&apos;s Privacy</h2>
+              <h2 id="childrens-privacy">7. Children&apos;s Privacy</h2>
               <p>
-                Learner AI is intended for users aged <strong>13 and older</strong>. We do not knowingly collect personal information from children under 13 (or under 16 in the European Economic Area). If we become aware that we have inadvertently collected data from a child below the applicable age, we will delete it promptly. If you believe we have collected data from a minor, please contact us immediately.
+                Learner AI is not intended for users under the age of 13. We do not knowingly collect data from children. If you believe we have inadvertently collected data from a child, please contact us immediately for deletion.
               </p>
 
               {/* Section 8 */}
-              <h2 id="changes">8. Changes to This Policy</h2>
+              <h2 id="data-retention">8. Data Retention & Storage</h2>
               <p>
-                We may update this Privacy Policy from time to time. We will notify you of material changes by posting the new policy in-app and updating the &ldquo;Last updated&rdquo; date at the top of this page. Your continued use of the Service after changes become effective constitutes your acceptance of the new policy.
+                Temporary technical and diagnostic data is automatically deleted within 30 days of collection, unless retention is required by law. We do not store any user data beyond the minimum period necessary to provide and improve our service.
+              </p>
+              <p>
+                <strong>Important: All user configurations, settings, and progress data are stored locally on your device&apos;s phone localstorage.</strong> We do not store any user data on our external servers. You can erase this data at any time by clearing your browser cache/storage or device application data.
               </p>
 
               {/* Section 9 */}
-              <h2 id="contact">9. Contact Us</h2>
-              <p>If you have questions, concerns, or requests regarding this Privacy Policy, please contact us at:</p>
+              <h2 id="cross-border-transfers">9. Cross-Border Data Transfers</h2>
+              <p>
+                Your data may be processed in countries outside your region as part of our global infrastructure. We rely on GDPR-approved mechanisms (e.g., Standard Contractual Clauses) or equivalent safeguards for cross-border transfers.
+              </p>
+
+              {/* Section 10 */}
+              <h2 id="cookies">10. Cookies & Tracking Technologies</h2>
+              <p>
+                We use cookies only for essential purposes such as session management and anonymized service performance analytics. You can disable non-essential cookies via your browser settings.
+              </p>
+
+              {/* Section 11 */}
+              <h2 id="changes">11. Changes to This Policy</h2>
+              <p>
+                We may update this policy to reflect legal changes or service improvements. Revisions will be posted with the &ldquo;Last Updated&rdquo; date. Continued use of our service after changes constitutes your acceptance of the updated policy.
+              </p>
+
+              {/* Section 12 */}
+              <h2 id="contact">12. Contact Us</h2>
+              <p>For any questions regarding this Privacy Policy, please contact us at:</p>
               <ul>
-                <li><strong>Email:</strong> <a href="mailto:privacy@learnerai.app">privacy@learnerai.app</a></li>
-                <li><strong>Support:</strong> <a href="mailto:support@learnerai.app">support@learnerai.app</a></li>
-                <li><strong>Website:</strong> <a href="https://learnerai.app">learnerai.app</a></li>
+                <li><strong>Email:</strong> <a href="mailto:ganeshglive@gmail.com">ganeshglive@gmail.com</a></li>
               </ul>
             </div>
           </div>

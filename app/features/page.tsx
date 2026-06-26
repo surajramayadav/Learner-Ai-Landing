@@ -34,7 +34,7 @@ const allFeatures = [
   },
   {
     icon: "🌍",
-    title: "30+ Languages",
+    title: "50+ Languages",
     desc: "From widely spoken languages like Spanish, French, and Mandarin, to niche picks like Finnish, Swahili, and Hungarian — Learner AI has you covered with native-quality AI voices.",
     color: "from-emerald-500 to-teal-500",
   },
@@ -181,7 +181,7 @@ export default function FeaturesPage() {
                 </svg>
                 App Store
               </a>
-              <a href="#" id="features-google-play-btn" className="inline-flex items-center justify-center gap-2 bg-purple-800/50 border border-white/30 text-white font-bold py-3 px-7 rounded-2xl hover:bg-purple-800 transition-all hover:-translate-y-1">
+              <a href="https://play.google.com/store/apps/details?id=com.learn.language.speak.fluently" id="features-google-play-btn" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-purple-800/50 border border-white/30 text-white font-bold py-3 px-7 rounded-2xl hover:bg-purple-800 transition-all hover:-translate-y-1">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M3.18 23.76c.37.2.8.22 1.2.06l12.55-7.26-2.88-2.88-10.87 10.08zm-1.05-20.2A1.5 1.5 0 0 0 2 4.5v15c0 .46.2.88.52 1.18l.08.07L14.27 9l-.03-.03L2.13 3.56zm20.04 8.02-2.99-1.73-3.17 3.17 3.17 3.17 3.01-1.74a1.5 1.5 0 0 0 0-2.87zM4.38.18 16.93 7.44l-2.88 2.88L1.58.24C1.97.08 2.41.1 2.78.3l1.6-.12z"/>
                 </svg>
