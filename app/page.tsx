@@ -36,6 +36,7 @@ function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <Link href="/" className="nav-link">Home</Link>
           <Link href="/features" className="nav-link">Features</Link>
+          <Link href="/support" className="nav-link">Support</Link>
           <Link href="/privacy" className="nav-link">Privacy</Link>
           <Link href="/terms" className="nav-link">Terms</Link>
         </div>
@@ -65,6 +66,7 @@ function Navbar() {
         <div className="md:hidden bg-white border-t border-purple-100 px-5 py-5 flex flex-col gap-4 shadow-xl">
           <Link href="/" className="font-semibold text-gray-700 hover:text-purple-700" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link href="/features" className="font-semibold text-gray-700 hover:text-purple-700" onClick={() => setMenuOpen(false)}>Features</Link>
+          <Link href="/support" className="font-semibold text-gray-700 hover:text-purple-700" onClick={() => setMenuOpen(false)}>Support & FAQ</Link>
           <Link href="/privacy" className="font-semibold text-gray-700 hover:text-purple-700" onClick={() => setMenuOpen(false)}>Privacy Policy</Link>
           <Link href="/terms" className="font-semibold text-gray-700 hover:text-purple-700" onClick={() => setMenuOpen(false)}>Terms & Conditions</Link>
           <a href="#download" className="btn-primary text-sm text-center" onClick={() => setMenuOpen(false)}>Download Free</a>
@@ -430,6 +432,7 @@ function Footer() {
               <ul className="space-y-2 text-sm">
                 <li><Link href="/" className="hover:text-purple-400 transition-colors">Home</Link></li>
                 <li><Link href="/features" className="hover:text-purple-400 transition-colors">Features</Link></li>
+                <li><Link href="/support" className="hover:text-purple-400 transition-colors">Support & FAQ</Link></li>
               </ul>
             </div>
             <div>
@@ -443,8 +446,8 @@ function Footer() {
               <p className="font-semibold text-gray-300 mb-3 text-sm uppercase tracking-widest">Contact</p>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="mailto:support@learnerai.app" className="hover:text-purple-400 transition-colors">
-                    support@learnerai.app
+                  <a href="mailto:ganeshglive@gmail.com" className="hover:text-purple-400 transition-colors">
+                    ganeshglive@gmail.com
                   </a>
                 </li>
               </ul>
