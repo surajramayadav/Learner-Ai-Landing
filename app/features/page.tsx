@@ -95,12 +95,13 @@ function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           <Link href="/" className="nav-link">Home</Link>
           <Link href="/features" className="nav-link" style={{ color: "#9333ea" }}>Features</Link>
+          <Link href="/support" className="nav-link">Support</Link>
           <Link href="/privacy" className="nav-link">Privacy</Link>
           <Link href="/terms" className="nav-link">Terms</Link>
         </div>
-        <a href="/#download" className="btn-primary text-sm py-2.5 px-5 hidden md:inline-flex">
+        <Link href="/#download" className="btn-primary text-sm py-2.5 px-5 hidden md:inline-flex">
           Download Free
-        </a>
+        </Link>
       </div>
     </nav>
   );
@@ -117,6 +118,7 @@ function Footer() {
         <div className="flex flex-wrap justify-center gap-6 text-sm mb-6">
           <Link href="/" className="hover:text-purple-400 transition-colors">Home</Link>
           <Link href="/features" className="hover:text-purple-400 transition-colors">Features</Link>
+          <Link href="/support" className="hover:text-purple-400 transition-colors">Support & FAQ</Link>
           <Link href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-purple-400 transition-colors">Terms & Conditions</Link>
         </div>
